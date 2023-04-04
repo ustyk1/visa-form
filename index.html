@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Promise</title>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>Заповніть форму наявності документів для отримання візи в Канаду...</h2>
+    <ol class="form">
+      <li class="form__item item">
+        <p>1. Дійсний закордонний паспорт:</p>
+        <div class="passport">
+          <input 
+            id="inp-passport-available" 
+            type="radio" 
+            name="passport" 
+            value="available" 
+            >
+          <label for="inp-passport-available">Наявний</label>
+          <input 
+            id="inp-passport-unavailable" 
+            type="radio" 
+            name="passport" 
+            value="unavailable"
+          >
+          <label for="inp-passport-unavailable">Відсутній</label>
+        </div>
+      </li>
+      <li class="form__item item">
+        <p>2. Cкан-копії всіх сторінок закордонного паспорта:</p>
+        <div class="scanned-copy">
+          <input 
+            id="inp-scanned-copy-available" 
+            type="radio" 
+            name="scanned-copy" 
+            value="available"
+          >
+          <label for="inp-scanned-copy-available">Наявні</label>
+          <input 
+            id="inp-scanned-copy-unavailable" 
+            type="radio" 
+            name="scanned-copy"
+            value="unavailable"
+          >
+          <label for="inp-scanned-copy-unavailable">Відсутні</label>
+        </div>
+        <div class="blur"></div>
+      </li>
+      <li class="form__item item">
+        <p>3. Український паспорт з усіма заповненими сторінками:</p>
+        <div class="ukrainian-passport">
+          <input 
+            id="inp-ua-passport-available" 
+            type="radio" 
+            name="ua-passport"
+            value="available"
+          >
+          <label for="inp-ua-passport-available">Наявний</label>
+          <input 
+            id="inp-ua-passport-unavailable" 
+            type="radio" 
+            name="ua-passport" 
+            value="unavailable"
+          >
+          <label for="inp-ua-passport-unavailable">Відсутній</label>
+        </div>
+        <div class="blur"></div>
+      </li>
+      <li class="form__item item">
+        <p>4. Свідоцтво про шлюб чи розлучення:</p>
+        <div class="marriage-or-divorce-certificate">
+          <input 
+            id="inp-marriage-certificate-available" 
+            type="radio" 
+            name="marriage-certificate" 
+            value="available"
+          >
+          <label for="inp-marriage-certificate-available">Наявний</label>
+          <input 
+            type="radio" 
+            name="marriage-certificate"
+            id="inp-marriage-certificate-unavailable" 
+            value="unavailable"
+          >
+          <label for="inp-marriage-certificate-unavailable">Відсутній</label>
+        </div>
+        <div class="blur"></div>
+      </li>
+      <li class="form__item item">
+        <p>5. Свідоцтва про народження дітей при наявності:</p>
+        <div class="childrens-birth-certificates">
+          <div>
+            <input 
+              id="inp-birth-certificate-avaiable" 
+              type="radio" 
+              name="birth-certificate" 
+              value="available"
+            >
+            <label for="inp-birth-certificate-avaiable">Є свідоцтвa про народження дітей або немає дітей</label>
+          </div>
+          <div>
+            <input 
+              id="inp-birth-certificate-unavaiable" 
+              type="radio" 
+              name="birth-certificate" 
+              value="unavailable"
+            >
+            <label for="inp-birth-certificate-unavaiable">Немає свідоцтво про народження дітей</label>
+          </div>
+        </div>
+        <div class="blur"></div>
+      </li>
+      <li class="form__item item">
+        <p>6. Виписка з банківського рахунку за останні пів року:
+        </p>
+        <div class="bank-account-statement">
+          <input  
+            id="inp-bank-statement-available" 
+            type="radio" 
+            name="bank-statement" 
+            value="available"
+          >
+          <label for="inp-bank-statement-available">Наявна</label>
+          <input 
+            id="inp-bank-statement-unavailable" 
+            type="radio" 
+            name="bank-statement" 
+            value="unavailable"
+          >
+          <label for="inp-bank-statement-unavailable">Відсутня</label>
+        </div>
+        <div class="blur"></div>
+      </li>
+    </ol>
+    <button class="apply" disabled>Подати документи</button>
+    <div class="error-msg-box">
+      Вам відмовлено у поданні візи в Канаду!
+      <p></p>
+    </div>
+    <div class="successful-msg-box">Документи на візу в Канаду подано!</div>
+  </div>
+ 
+  <script src="./scripts/script.js"></script>
+</body>
+</html>
